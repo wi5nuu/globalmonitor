@@ -1,0 +1,93 @@
+/* App-specific styles */
+
+/* Mapbox Popup Customization */
+.aircraft-popup .mapboxgl-popup-content {
+  background: transparent !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+.aircraft-popup .mapboxgl-popup-tip {
+  border-top-color: rgba(10, 22, 40, 0.95) !important;
+}
+
+.aircraft-popup .mapboxgl-popup-close-button {
+  color: #94A3B8;
+  font-size: 16px;
+  padding: 4px 8px;
+}
+
+.aircraft-popup .mapboxgl-popup-close-button:hover {
+  color: #E2E8F0;
+  background: transparent;
+}
+
+/* Custom Scrollbar */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: rgba(14, 165, 233, 0.3);
+  border-radius: 2px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  background: rgba(14, 165, 233, 0.5);
+}
+
+/* Animation Keyframes */
+@keyframes radar-sweep {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes scan-line {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Mobile Touch Improvements */
+@media (hover: none) {
+  .hover\:bg-\[\#0F1E35\]:hover {
+    background-color: transparent;
+  }
+  
+  .hover\:border-\[\#0EA5E9\]\/40:hover {
+    border-color: transparent;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
